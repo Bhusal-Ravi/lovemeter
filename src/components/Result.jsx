@@ -60,7 +60,8 @@ function Result() {
 
                 {loading && (
                     <div className="w-full flex justify-center items-center flex-col max-w-md mt-6">
-                        <p className="text-center text-black font-semibold">Calculating...</p>
+                        {!button && <p className="text-center text-black font-semibold">Calculating...</p>}
+                        {button && <p className="text-center text-black font-semibold">Complete</p>}
                         <div className="w-full bg-gray-300 rounded-full h-6 overflow-hidden mt-2">
                             <motion.div
                                 className="h-full bg-red-500"
