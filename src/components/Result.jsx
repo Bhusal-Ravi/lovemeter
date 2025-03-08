@@ -70,7 +70,8 @@ function Result() {
                             />
                         </div>
                         <div className="flex justify-center w-full">
-                            {button && (<button className='p-2 mt-5 cursor-pointer rounded-xl bg-red-500 text-white font-semibold px-4' onClick={toggleResult}>Show Result</button>)}
+                            {!button && <p className="text-center text-black font-semibold">Calculating...</p>}
+                        {button && <p className="text-center text-black font-semibold">Complete</p>}
                         </div>
                     </div>
                 )}
