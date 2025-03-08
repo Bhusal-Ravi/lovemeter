@@ -5,8 +5,7 @@ This is a fun Love Meter web app that calculates the love percentage between two
 ## ✨ Screenshots
 
 ### Home Screen
-![Home Screen](![image](public/home.png)
-)
+![Image](https://github.com/user-attachments/assets/7837690a-ad3f-48e4-8676-5a574a541896)
 
 ### Input Names
 ![Input Names](![image](https://github.com/user-attachments/assets/488e61d9-7353-49b9-baaa-00020730ddd1)
