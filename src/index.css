@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-image: url("../src/assets/grid.jpg");
+  background-image: url("/grid.jpg");
   background-size: cover;
   background-position: center center;
   overflow: hidden;
