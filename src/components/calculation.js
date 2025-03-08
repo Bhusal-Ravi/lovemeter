@@ -42,17 +42,21 @@ const two= data.secondname;
 
     actCount=[...number];
 
-    while(actCount.length!==2){
-        for(let i=0;i<Math.ceil(actCount.length/2);i++){
-                if(actCount[i].id===actCount[(actCount.length-1)-i].id) {
-                    tempCount.push(actCount[i])
-                }else{
-                    let tc=actCount[i].count+actCount[(actCount.length-1)-i].count
-                    
-                    tempCount.push({letter:`p${i}`,count:tc,id:uuidv4()})
-                }
+    while(actCount.length>2){
+        const len=actCount.length;
+        for(let i=0;i<Math.floor(actCount.length/2);i++){
+             
+            let sum=actCount[i].count + actCount[len-1-i].count;
 
-
+            if(sum>=10){
+                tempCount.push({count:Math.floor(sum/10)})
+                tempCount.push({count:sum%10})
+            }else{
+                tempCount.push({count:sum})
+            }
+        }
+        if(len%2!==0){
+            tempCount.push({count:actCount[Math.floor(len/2)].count})
         }
         actCount=[...tempCount];
         tempCount=[];
