@@ -13,7 +13,8 @@ This is a fun Love Meter web app that calculates the love percentage between two
 )
 
 ### Love Result
-![Love Result](![image](https://github.com/user-attachments/assets/cee610e3-8975-418f-85e9-1492db9338b4)
+![Love Result](![image](https://github.com/user-attachments/assets/662d40e1-2b18-47ef-830f-7ea8071f9d27)
+)
 )
 
 ## 🚀 Features
