@@ -5,13 +5,14 @@ This is a fun Love Meter web app that calculates the love percentage between two
 ## ✨ Screenshots
 
 ### Home Screen
-![Image](https://github.com/user-attachments/assets/7837690a-ad3f-48e4-8676-5a574a541896)
+<img src="https://github.com/user-attachments/assets/7837690a-ad3f-48e4-8676-5a574a541896" alt="Home Screen" width="300">
 
 ### Input Names
-![Image](https://github.com/user-attachments/assets/894aa849-a767-487a-8a75-cdc6dffaec7c)
+<img src="https://github.com/user-attachments/assets/894aa849-a767-487a-8a75-cdc6dffaec7c" alt="Input Names" width="300">
 
 ### Love Result
-![Image](https://github.com/user-attachments/assets/f2fd919f-91bc-48c7-ac93-163dd5070c0b)
+<img src="https://github.com/user-attachments/assets/f2fd919f-91bc-48c7-ac93-163dd5070c0b" alt="Love Result" width="300">
+
 
 
 ## 🚀 Features
