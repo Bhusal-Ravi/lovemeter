@@ -1,15 +1,19 @@
 import React from 'react'
 import LoveMeter from './LoveMeter'
-import { useLocation } from 'react-router'
+import { useLocation, useNavigate } from 'react-router'
 import { loveCalculator } from './calculation';
 
 function Result() {
+    const navigate = useNavigate()
     const location = useLocation();
     const data = location.state
     console.log(data)
 
     const result = loveCalculator(data)
     console.log(result)
+    function goHome() {
+        navigate('/detail')
+    }
 
     const messages = [
         `The stars have whispered a secret: ${data.firstname}'s heart beats in harmony with ${data.secondname}'s at <span class="bg-white p-2 rounded m-2 font-bold text-red-500">${result}%</span> - a cosmic connection written in the constellations.`,
@@ -24,7 +28,7 @@ function Result() {
     ];
 
     return (
-        <div className='flex justify-center items-center min-h-screen px-4 py-8 bg-red-400/50'>
+        <div className='flex justify-center flex-col items-center min-h-screen px-4 py-8 bg-red-400/50'>
             <div className='text-white w-full max-w-lg'>
                 <LoveMeter className='relative z-0' />
                 <div className='p-3 sm:p-5 m-2 sm:m-5 bg-black/50 shadow-xl shadow-red-500/50 rounded-xl'>
@@ -41,6 +45,7 @@ function Result() {
                     />
                 </div>
             </div>
+            <button className='cursor-pointer bg-rose-500 text-white font-bold scale-95 hover:scale-105 duration-500 ease-in-out rounded-xl px-4 py-3 mt-10 sm:mt-20 w-full sm:w-auto max-w-xs text-center' onClick={goHome}>Explore More Love</button>
         </div>
     )
 }
