@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+  background-image: url("../src/assets/grid.jpg");
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
