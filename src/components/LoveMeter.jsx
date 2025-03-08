@@ -27,12 +27,12 @@ function LoveMeter() {
             <div className="absolute inset-0 overflow-visible pointer-events-none z-0">
                 <img
                     className='absolute z-0 h-auto w-full sm:w-4/5 lg:w-3/4 max-w-md -left-1/4 sm:-left-20 lg:-left-24 top-1/4 sm:top-1/3 -translate-y-1/2 rotate-30 animate-pulse filter drop-shadow-[0_0_15px_rgba(244,63,94,0.9)]'
-                    src='../src/assets/rose.png'
+                    src='/rose.png'
                     alt="Left rose"
                 />
                 <img
                     className='absolute z-0 h-auto w-full sm:w-4/5 lg:w-3/4 max-w-md -right-1/4 sm:-right-20 lg:-right-24 top-1/4 sm:top-1/3 -translate-y-1/2 rotate-335 animate-pulse filter drop-shadow-[0_0_15px_rgba(244,63,94,0.9)]'
-                    src='../src/assets/rose.png'
+                    src='/rose.png'
                     alt="Right rose"
                 />
             </div>
