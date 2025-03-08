@@ -60,7 +60,8 @@ function Result() {
 
                 {loading && (
                     <div className="w-full flex justify-center items-center flex-col max-w-md mt-6">
-                        <p className="text-center text-black font-semibold">Calculating...</p>
+                         {!button && <p className="text-center text-black font-semibold">Calculating...</p>}
+                        {button && <p className="text-center text-black font-semibold">Complete</p>}
                         <div className="w-full bg-gray-300 rounded-full h-6 overflow-hidden mt-2">
                             <motion.div
                                 className="h-full bg-red-500"
@@ -70,8 +71,7 @@ function Result() {
                             />
                         </div>
                         <div className="flex justify-center w-full">
-                            {!button && <p className="text-center text-black font-semibold">Calculating...</p>}
-                        {button && <p className="text-center text-black font-semibold">Complete</p>}
+                            {button && (<button className='p-2 mt-5 cursor-pointer rounded-xl bg-red-500 text-white font-semibold px-4' onClick={toggleResult}>Show Result</button>)}
                         </div>
                     </div>
                 )}
