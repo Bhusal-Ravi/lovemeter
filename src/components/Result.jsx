@@ -8,6 +8,7 @@ function Result() {
     const [result, setResult] = useState(0)
     const [loading, setLoading] = useState(true)
     const [button, setButton] = useState(false)
+    const [heart, setHeart] = useState([])
 
     const location = useLocation();
     const data = location.state
@@ -29,17 +30,48 @@ function Result() {
 
     const navigate = useNavigate()
 
+    function createHeart() {
+        const id = Date.now();
+        const leftPosn = Math.floor(Math.random() * 100);
+        const rightPosn = Math.floor(Math.random() * 100);
+
+        setHeart((prevHeart) => [...prevHeart, { id, leftPosn, rightPosn }])
+
+        setTimeout(() => {
+            setHeart(prevHearts => prevHearts.filter(heart => heart.id !== id));
+        }, 2000);
+    }
+
+    function handleHover() {
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => createHeart(), i * 100)
+        }
+    }
+
     useEffect(() => {
         obtainResult();
+        handleHover();
 
         setTimeout(() => {
             setButton(true)
         }, 5000)
+
+
     }, [])
+
+    useEffect(() => {
+        if (!loading && result !== 0) {
+            handleHover();
+        }
+    }, [loading, result]);
 
     function goHome() {
         navigate('/detail')
     }
+
+
+
+
 
     const messages = [
         `The stars have whispered a secret: ${data?.firstname}'s heart beats in harmony with ${data?.secondname}'s at <span class="bg-white p-2 rounded m-2 font-bold text-red-500">${result}%</span> - a cosmic connection written in the constellations.`,
@@ -89,6 +121,23 @@ function Result() {
                                                     messages[4]
                             }}
                         />
+                        {heart.map((ht) => (
+
+                            <div
+                                className='absolute z-20 animate-bounce text-4xl'
+                                key={ht.id}
+                                style={{
+                                    left: `${ht.leftPosn}%`,
+                                    top: `${ht.rightPosn}%`,
+                                    fontSize: '2rem',
+                                    animation: 'bounce 1s infinite,fadeOut 2s ease-out forwards'
+                                }}
+                            >
+                                ❤️
+                            </div>
+
+
+                        ))}
                     </div>
                 )}
             </div>
